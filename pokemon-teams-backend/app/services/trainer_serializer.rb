@@ -9,10 +9,10 @@ def to_serialized_json
   # @trainer.to_json(:include => {:pokemons => {:only => [:nickname, :species]}})
 
   @trainer.to_json({
-    :only =>  [:name],
+    :only =>  [:name, :id],
     :include => {
       :pokemons => {
-        :only => [:nickname, :species]}
+        :only => [:nickname, :species, :id]}
     }
   })
 
